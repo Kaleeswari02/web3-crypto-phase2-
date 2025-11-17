@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/blog1.png",
+    "category": "M2E",
+    "title": "Blog 1 Lorem ipsum dolor sit amet, consectetur...",
+    "action": "Read...",
+    "date": "Aug 20 - 14:12",
+    "buttonText": "Join now"
+  },
+  {
+    "id": 2,
+    "image": "/assets/blog1.png",
+    "category": "M2E",
+    "title": "Blog 2 Another blog post title goes here...",
+    "action": "Read...",
+    "date": "Aug 21 - 10:30",
+    "buttonText": "Join now"
+  },
+  {
+    "id": 3,
+    "image": "/assets/blog1.png",
+    "category": "M2E",
+    "title": "Blog 3 Third blog post sample text...",
+    "action": "Read...",
+    "date": "Aug 22 - 16:45",
+    "buttonText": "Join now"
+  },
+  {
+    "id": 4,
+    "image": "/assets/blog1.png",
+    "category": "M2E",
+    "title": "Blog 4 Fourth blog post sample text...",
+    "action": "Read...",
+    "date": "Aug 23 - 18:20",
+    "buttonText": "Join now"
+  }
+]

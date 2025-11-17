@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/blog2.png",
+    "category": "M2E",
+    "title": "Community post 1 example...",
+    "action": "Read...",
+    "date": "Aug 23 - 12:15",
+    "buttonText": "Membered"
+  },
+  {
+    "id": 2,
+    "image": "/assets/blog2.png",
+    "category": "M2E",
+    "title": "Community post 2 example...",
+    "action": "Read...",
+    "date": "Aug 24 - 09:50",
+    "buttonText": "Membered"
+  },
+  {
+    "id": 3,
+    "image": "/assets/blog2.png",
+    "category": "M2E",
+    "title": "Community post 3 example...",
+    "action": "Read...",
+    "date": "Aug 25 - 14:30",
+    "buttonText": "Membered"
+  },
+  {
+    "id": 4,
+    "image": "/assets/blog2.png",
+    "category": "M2E",
+    "title": "Community post 4 example...",
+    "action": "Read...",
+    "date": "Aug 25 - 14:30",
+    "buttonText": "Membered"
+  }
+]

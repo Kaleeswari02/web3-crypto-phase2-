@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "app/sections/StakingCard.js",
+    "app/sections/WalletCard.js",
+    "app/sections/animations/FeatureCardAnimation.js",
+    "app/sections/animations/CardHoverAnimation.js",
+    "app/sections/animations/HeaderAnimation.js",
+    "app/sections/animations/LoadingAnimation.js",
+    "app/sections/animations/LogoAnimation.js",
+    "app/sections/animations/WalletCardAnimation.js",
+    "app/sections/animations/TitleAnimations.js",
+    "app/sections/animations/CardAnimation.js",
+    "app/sections/animations/FeatureLeftCardHoverAnimation.js",
+    "app/sections/animations/FeatureRightCard.js",
+    "app/sections/FeatureLeftCard.js",
+    "app/sections/FeatureRightCard.js",
+    "app/sections/animations/NFTCardHoverAnimation.js"
+, "app/api/auth/[...nextauth]/route.js", "app/api/hello/route.js"  ],
+  "exclude": ["node_modules"]
+}
