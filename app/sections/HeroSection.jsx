@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 
-export default function HeroSection() {
+export default function AnimatedIconsPage() {
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [screen, setScreen] = useState('desktop');
+  const [screen, setScreen] = useState("desktop");
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 100);
@@ -14,13 +13,13 @@ export default function HeroSection() {
   // Detect screen size for responsive drop positions
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) setScreen('mobile');
-      else if (window.innerWidth < 1024) setScreen('tablet');
-      else setScreen('desktop');
+      if (window.innerWidth < 640) setScreen("mobile");
+      else if (window.innerWidth < 1024) setScreen("tablet");
+      else setScreen("desktop");
     };
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const icons = [
@@ -40,12 +39,12 @@ export default function HeroSection() {
     ];
 
     let scale;
-    if (screen === 'mobile') scale = 0.55;
-    else if (screen === 'tablet') scale = 0.75;
+    if (screen === "mobile") scale = 0.55;
+    else if (screen === "tablet") scale = 0.75;
     else scale = 1; // desktop
 
     // Scale only the positions, not angles
-    return basePositions.map((pos) => ({
+    return basePositions.map(pos => ({
       x: pos.x * scale,
       y: pos.y * scale,
       angle: pos.angle,
@@ -70,9 +69,7 @@ export default function HeroSection() {
           <div
             key={item.id}
             className={`relative transform transition-all duration-700 ease-out ${
-              isVisible
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-48 opacity-0'
+              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-48 opacity-0'
             }`}
             style={{ transitionDelay: `${iconIndex * 200}ms` }}
             onMouseEnter={() => setHoveredIndex(iconIndex)}
@@ -88,41 +85,29 @@ export default function HeroSection() {
             >
               {/* Icon Images */}
               {iconIndex === 0 && (
-                <Image
+                <img
                   src="/assets/play.webp"
                   alt="Play"
-                  width={40}
-                  height={40}
                   className={`object-contain play-img image-center-place opacity-90 transform transition-all duration-500 ease-out ${
-                    hoveredIndex === iconIndex
-                      ? 'translate-y-0 opacity-100'
-                      : 'translate-y-2 opacity-0'
+                    hoveredIndex === iconIndex ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'
                   }`}
                 />
               )}
               {iconIndex === 1 && (
-                <Image
+                <img
                   src="/assets/run.webp"
                   alt="Run"
-                  width={40}
-                  height={40}
                   className={`object-contain run-img image-center-place opacity-90 transform transition-all duration-500 ease-out ${
-                    hoveredIndex === iconIndex
-                      ? 'translate-y-0 opacity-100'
-                      : 'translate-y-5 opacity-0'
+                    hoveredIndex === iconIndex ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'
                   }`}
                 />
               )}
               {iconIndex === 2 && (
-                <Image
+                <img
                   src="/assets/earn.webp"
                   alt="Earn"
-                  width={40}
-                  height={40}
                   className={`object-contain earn-img image-center-place opacity-90 transform transition-all duration-500 ease-out ${
-                    hoveredIndex === iconIndex
-                      ? 'translate-y-0 opacity-100'
-                      : 'translate-y-5 opacity-0'
+                    hoveredIndex === iconIndex ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'
                   }`}
                 />
               )}
@@ -136,20 +121,14 @@ export default function HeroSection() {
                   className="absolute top-1/2 left-1/2 movingdrop rounded-full w-4 h-4 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-9 lg:h-9"
                   style={{
                     backgroundColor: item.bgColor,
-                    marginLeft: '-5px',
-                    marginTop: '-5px',
+                    marginLeft: "-5px",
+                    marginTop: "-5px",
                     boxShadow: `0 0 15px ${item.bgColor}50`,
-                    transition:
-                      'transform 600ms cubic-bezier(0.2, 0, 0.2, 1), opacity 300ms ease-out',
+                    transition: "transform 600ms cubic-bezier(0.2, 0, 0.2, 1), opacity 300ms ease-out",
                     ...getDropStyle(dropIndex, hoveredIndex === iconIndex),
                     ...(hoveredIndex === iconIndex
-                      ? {
-                          animation: `dropBurst 1s ${dropIndex * 80}ms forwards`,
-                        }
-                      : {
-                          opacity: 0.3,
-                          animation: `dropReturn 600ms ${dropIndex * 50}ms forwards`,
-                        }),
+                      ? { animation: `dropBurst 1s ${dropIndex * 80}ms forwards` }
+                      : { opacity: 0.3, animation: `dropReturn 600ms ${dropIndex * 50}ms forwards` }),
                   }}
                 />
               ))}
