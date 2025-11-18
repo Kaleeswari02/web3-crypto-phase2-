@@ -671,3 +671,63 @@ body {
   animation: rotateOrbit 10s linear infinite;
   transform-origin: center center;
 }
+.web3works{
+  padding-top: 7%;
+  background-color: #0f0f0f;
+}
+        @keyframes bounceIn {
+          0% {
+            transform: translateY(100vh);
+            opacity: 0;
+          }
+          60% {
+            transform: translateY(-30px);
+            opacity: 1;
+          }
+          80% {
+            transform: translateY(10px);
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+
+        .web3howitsworks {
+          position: relative;
+          min-height: 100vh;
+          background-image: url('/assets/howitworksbg.png');
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          background-color: #0f0f0f;
+          /* padding-top: 25%; */
+        }
+
+        .mobile-container {
+          position: relative;
+          z-index: 2;
+          opacity: 0;
+        }
+
+        .mobile-container.animate {
+          animation: bounceIn 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+        }
+
+        .mobile-container img {
+          max-width: 550px;
+          height: auto;
+          display: block;
+        }
+
+        @media (max-width: 768px) {
+          .web3howitsworks {
+            background-size: cover;
+            background-position: top;
+            }
+        }
+ 
