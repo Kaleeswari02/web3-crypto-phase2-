@@ -15,9 +15,9 @@ export default function Fitness() {
   // State for mobile image carousel
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const mobileImages = [
-    '/assets/play (2).png',
-    '/assets/earn (2).png',
-    '/assets/move.png',
+    'assets/fitness-img1.png',
+    'assets/fitness-img2.png',
+    'assets/fitness-img3.png',
   ];
 
   useEffect(() => {
@@ -95,8 +95,8 @@ export default function Fitness() {
   };
 
   return (
-    <section className="w-full min-h-screen md:h-screen flex justify-center items-center bg-black overflow-hidden py-8 md:py-0">
-      <div className="w-[90%] md:w-[80%] h-auto md:h-[80%] flex flex-col md:flex-row justify-center items-center md:mt-24 gap-8 md:gap-0">
+    <section className="w-full min-h-screen md:h-screen flex justify-center items-center bg-lightdark overflow-hidden py-8 md:py-0">
+      <div className="w-[90%] md:w-[80%] h-auto md:h-[80%] flex flex-col md:flex-row justify-center items-center md:mt-2 gap-8 md:gap-0">
         {/* Text and Buttons Section */}
         <div className="w-full md:w-[55%] h-auto md:h-full flex flex-col justify-center space-y-6 md:space-y-8 text-white px-4 md:px-5">
           <h1
@@ -114,7 +114,7 @@ export default function Fitness() {
           >
             <div className="flex items-center gap-2 border-2 border-[#7928D2] rounded-full px-4 py-2 bg-[#7928D2]/10">
               <img
-                src="assets/Frame 1618871182000 4.png"
+                src="/assets/fitness-icon1.png"
                 className="w-5 h-5"
                 alt="Earn"
               />
@@ -122,7 +122,7 @@ export default function Fitness() {
             </div>
             <div className="flex items-center gap-2 border-2 border-[#399FE9] rounded-full px-4 py-2 bg-[#399FE9]/10">
               <img
-                src="assets/Frame 1618871182000 3.png"
+                src="/assets/fitness-icon2.png"
                 className="w-5 h-5"
                 alt="Move"
               />
@@ -130,7 +130,7 @@ export default function Fitness() {
             </div>
             <div className="flex items-center gap-2 border-2 border-[#14F195] rounded-full px-4 py-2 bg-[#14F195]/10">
               <img
-                src="assets/Frame 1618871182000 2.png"
+                src="/assets/fitness-img3.png"
                 className="w-5 h-5"
                 alt="Play"
               />
@@ -142,7 +142,7 @@ export default function Fitness() {
           <div ref={buttonsRef} className="hidden md:flex flex-col gap-4 w-">
             <div className="flex gap-4 items-center">
               <img
-                src="assets/Frame 1618871182000 2.png"
+                src="/assets/fitness-icon1.png"
                 className="w-10 h-10"
                 alt="Play"
               />
@@ -152,7 +152,7 @@ export default function Fitness() {
             </div>
             <div className="flex gap-4 items-center">
               <img
-                src="assets/Frame 1618871182000 3.png"
+                src="/assets/fitness-icon2.png"
                 className="w-10 h-10"
                 alt="Move"
               />
@@ -162,7 +162,7 @@ export default function Fitness() {
             </div>
             <div className="flex gap-4 items-center">
               <img
-                src="assets/Frame 1618871182000 4.png"
+                src="/assets/fitness-icon3.png"
                 className="w-10 h-10"
                 alt="Earn"
               />
@@ -182,7 +182,7 @@ export default function Fitness() {
           >
             <div className="relative w-full max-w-[320px] bg-gradient-to-br from-blue-400 to-blue-600 rounded-3xl p-1">
               {/* Main Image Container */}
-              <div className="relative bg-black rounded-3xl overflow-hidden">
+              <div className="relative bg-lightdark rounded-3xl overflow-hidden">
                 <img
                   src={mobileImages[currentImageIndex]}
                   alt={`Slide ${currentImageIndex + 1}`}
@@ -256,7 +256,7 @@ export default function Fitness() {
             <div className="w-1/2 flex items-center justify-center">
               <img
                 ref={firstImageRef}
-                src="/assets/play (2).png"
+                src="/assets/fitness-img1.png"
                 alt="First Image"
                 className="w-60 h-[22rem]"
               />
@@ -265,13 +265,13 @@ export default function Fitness() {
             <div className="w-1/2 flex flex-col gap-4 justify-center">
               <img
                 ref={secondImageRef}
-                src="/assets/earn (2).png"
+                src="/assets/fitness-img2.png"
                 alt="Second Image"
                 className="w-60 h-[28rem] rounded-2xl"
               />
               <img
                 ref={thirdImageRef}
-                src="/assets/move.png"
+                src="/assets/fitness-img3.png"
                 alt="Third Image"
                 className="w-60 h-[28rem] rounded-2xl"
               />
