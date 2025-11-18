@@ -13,7 +13,7 @@ export default function Footer() {
 
 
   return (
-    <footer className="bg-[#1E1E1E] text-white py-12 px-6">
+    <footer className="bg-lightdark text-white py-12 px-6">
       {/* Logo / Title Section */}
  <FooterLogoSection/>
 

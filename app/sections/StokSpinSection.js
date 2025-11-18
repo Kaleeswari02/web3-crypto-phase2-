@@ -29,7 +29,7 @@ const CoinStokSection = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#1E1E1E] relative overflow-hidden p-5">
+    <div className="min-h-screen bg-lightdark relative overflow-hidden p-5">
       <div className="container mx-auto px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Rotating Coins */}

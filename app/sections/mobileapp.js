@@ -53,7 +53,7 @@ export default function DownloadSection() {
   return (
     <section
       id="download-section"
-      className="relative flex flex-col md:flex-row items-center justify-between px-6 md:px-20 bg-[#1E1E1E] text-white min-h-[120vh]"  // Full viewport height
+      className="relative flex flex-col md:flex-row items-center justify-between px-6 md:px-20 bg-lightdark text-white min-h-[120vh]"  // Full viewport height
     >
       {/* Left Side - Phone */}
       <div

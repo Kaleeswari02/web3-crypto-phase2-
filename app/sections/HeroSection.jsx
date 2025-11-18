@@ -63,7 +63,7 @@ export default function AnimatedIconsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#1E1E1E] flex items-center justify-center p-6 pt-xl-0 pt-lg-0 pt-md-0 pt-30">
+    <div className="min-h-screen bg-[#0f0f0f] flex items-center justify-center p-6 pt-xl-0 pt-lg-0 pt-md-0 pt-30">
       <div className="flex flex-col md:flex-row flex-wrap gap-8 md:gap-12 lg:gap-16 items-center justify-center">
         {icons.map((item, iconIndex) => (
           <div

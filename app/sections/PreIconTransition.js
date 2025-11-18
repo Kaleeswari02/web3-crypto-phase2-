@@ -129,7 +129,7 @@ const PreIconTransition = () => {
     <section
       ref={sectionRef}
       style={{ height: `${SECTION_VH}vh`, overflow: 'hidden' }}
-      className="relative bg-[#1E1E1E] text-white"
+      className="relative bg-lightdark text-white"
     >
       <div className="w-full h-full relative">
         {/* ICONS */}
