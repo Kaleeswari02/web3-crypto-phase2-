@@ -15,12 +15,14 @@ const CoinStokSection = () => {
     { id: 7, image: '/assets/rotateicon7.webp' },
   ];
 
-  const radius = 285;
+  const radius = 250; // orbit radius (adjust to avoid overlapping center coin)
+  const containerSize = 450; // left section container
+  const orbitIconSize = 140; // fixed orbiting coin size
 
   useEffect(() => {
     let animationFrame;
     const animate = () => {
-      setAngle((prev) => (prev + 1) % 360); // speed of rotation
+      setAngle((prev) => (prev + 1) % 360);
       animationFrame = requestAnimationFrame(animate);
     };
     animate();
@@ -30,34 +32,40 @@ const CoinStokSection = () => {
 
   return (
     <div className="min-h-screen bg-lightdark relative overflow-hidden p-5">
-      <div className="container mx-auto px-8 py-16">
+      <div className="container mx-auto px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Rotating Coins */}
-          <div className="relative flex items-center justify-center w-full h-full">
-            {/* Background Overlay Image */}
-            <div className="absolute inset-0">
-              <Image
-                src="/assets/stok-bg-green-overlay.png"
-                alt="background overlay"
-                className="bject-cover"
-                height={1096}
-                width={1011}
-              />
-            </div>
+          <div
+            className="relative flex items-center justify-center w-full"
+            style={{ height: containerSize, maxHeight: containerSize }}
+          >
+           {/* Background Overlay */}
+          <div className="absolute top-1/2 left-0 transform -translate-y-1/2">
+            <Image
+              src="/assets/stok-bg-green-overlay.png"
+              alt="background overlay"
+              className="object-cover h-full"
+              height={1000}
+              width={1000}
+            />
+<div className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-b from-[#0f0f0f] via-transparent to-[#0f0f0f]"></div>
 
+          </div>
             {/* Coin Container */}
-            <div className="relative w-96 h-96">
-              {/* Central STOK Coin */}
+            <div
+              className="relative w-full h-full"
+              style={{ width: containerSize, height: containerSize }}
+            >
+              {/* Central STOK Coin (fixed, never moves) */}
               <div
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 centerCoinindex"
-                style={{ zIndex: 25 }}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 centerCoinindex z-30"
               >
                 <div className="rounded-full stockCoinShape flex center-coin">
                   <Image
                     src="/assets/stok.webp"
                     alt="stok"
-                    width={442}
-                    height={547}
+                    width={containerSize}
+                    height={containerSize}
                   />
                 </div>
               </div>
@@ -72,14 +80,13 @@ const CoinStokSection = () => {
                 const y = Math.sin(radians) * radius;
 
                 const zIndex = Math.round(((y + radius) / (2 * radius)) * 50);
-                const scale = 0.7 + ((y + radius) / (2 * radius)) * 0.3;
 
                 return (
                   <div
                     key={coin.id}
                     className="absolute top-1/2 left-1/2"
                     style={{
-                      transform: `translate(${x}px, ${y}px) translate(-50%, -50%) scale(${scale})`,
+                      transform: `translate(${x}px, ${y}px) translate(-50%, -50%)`,
                       zIndex,
                       transition: 'transform 0.05s linear',
                     }}
@@ -88,8 +95,8 @@ const CoinStokSection = () => {
                       <Image
                         src={coin.image}
                         alt="rotatingcoin"
-                        width={163}
-                        height={163}
+                        width={orbitIconSize}
+                        height={orbitIconSize}
                       />
                     </div>
                   </div>
@@ -100,87 +107,27 @@ const CoinStokSection = () => {
 
           {/* Right Side - Content */}
           <div className="flex flex-col justify-center items-center w-full h-full">
-            {/* Heading */}
             <div className="stockheadpart mb-5">
               <Image
-                src="/assets/stockheading.webp"
+                src="/assets/stok-spin-textimg.png"
                 alt="stock heading"
-                width={567}
-                height={207}
+                width={529}
+                height={117}
               />
             </div>
 
-            {/* Description */}
-            <p className="text-gray-400 text-center text-lg mb-8 stockDes">
-              Lorem ipsum dolor sit amet,
-              <br /> consectetur
-            </p>
-
-            {/* Icons */}
-            <div className="grid grid-cols-3 gap-y-4 stocksmallicons mb-8">
-              {/* Play Icon */}
-              <div className="text-center">
-                <div className="rounded-full flex items-center justify-center mb-2">
-                  <Image
-                    src="/assets/stok-play-icon.png"
-                    alt="play"
-                    width={106}
-                    height={106}
-                  />
-                </div>
-                <p className="text-gray-400 text-sm icontextfont">PLAY</p>
-              </div>
-
-              {/* Run Icon */}
-              <div className="text-center">
-                <div className="rounded-full flex items-center justify-center mb-2">
-                  <Image
-                    src="/assets/stok-run-icon.png"
-                    alt="run"
-                    width={106}
-                    height={106}
-                  />
-                </div>
-                <p className="text-gray-400 text-sm icontextfont">RUN</p>
-              </div>
-
-              {/* Earn Icon */}
-              <div className="text-center">
-                <div className="rounded-full flex items-center justify-center mb-2">
-                  <Image
-                    src="/assets/stok-earn-icon.png"
-                    alt="earn"
-                    width={106}
-                    height={106}
-                  />
-                </div>
-                <p className="text-gray-400 text-sm icontextfont">EARN</p>
-              </div>
-            </div>
-
-            {/* Buy Button */}
-            <div className="w-full flex justify-center mb-10">
-              <GradientButton label="Buy" onClick={() => alert('Pressed!')} />
-            </div>
-
-            {/* Decorative Glass Square */}
-            <div className="glasssquare mb-6">
-              <Image
-                src="/assets/glasssquare.webp"
-                width={166}
-                height={168}
-                alt="glass square"
-              />
-            </div>
-
-            {/* Decorative Glass Rectangle */}
-            <div className="glassRec">
-              <Image
-                src="/assets/glassrec.webp"
-                width={127}
-                height={224}
-                alt="glass rectangle"
-              />
+            <div className="flex flex-col text-left space-y-5">
+              <p className="text-white text-[36px] mb-6 font-dreiviertelfett leading-tight">
+                Your Digital Asset Proof of <br />
+                Active living.
+              </p>
+              <p className="text-[36px] font-dreiviertelfett leading-tight">
+                <span className="text-activegreen">Own it.</span>{" "}
+                <span className="text-purple">Earn it.</span>
+              </p>
+              <p className="text-[36px] font-dreiviertelfett leading-tight">
+                <span className="text-lightBlue">Move the world with it.</span>
+              </p>
             </div>
           </div>
         </div>

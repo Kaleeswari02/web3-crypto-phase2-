@@ -12,7 +12,16 @@ const FeatureCard = () => {
   });
 
   return (
-    <section className="card_section bg-lightdark relative w-full flex items-center justify-center overflow-visible py-20">
+<section className="card_section bg-lightdark relative w-full flex items-center justify-center overflow-visible py-20">
+  {/* Centered small background image */}
+  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none">
+    <img
+      src="/assets/feature-card-textbg.png"
+      alt="background"
+      className="w-auto h-auto max-w-[800px] max-h-[400px]" // adjust size as needed
+    />
+  </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl w-full items-start overflow-visible">
         {/* Left Side Card */}
         <div className="slide_contents flex flex-col gap-3">
@@ -89,7 +98,7 @@ const FeatureCard = () => {
 
               {/* Two stacked cards */}
               <div className="flex justify-center relative">
-                <div className="rounded-lg overflow-hidden card_component relative h-[500px] ">
+                <div className="rounded-lg overflow-visible card_component relative h-[500px] ">
                   {/* Purple Card */}
                   <Image
                     src="/assets/purple-card.png"
@@ -109,29 +118,30 @@ const FeatureCard = () => {
                   />
 
                   {/* Icons centered halfway on bottom of feature card */}
-                  <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/5 flex gap-6 z-10 ">
-                    <Image
-                      src="/assets/meta-center-icon1.png"
-                      alt="Icon 1"
-                      className="w-12 h-12 object-contain cursor-pointer loader"
-                      width={52}
-                      height={52}
-                    />
-                    <Image
-                      src="/assets/meta-center-icon2.png"
-                      alt="Icon 2"
-                      className="w-12 h-12 object-contain cursor-pointer loader"
-                      width={52}
-                      height={52}
-                    />
-                    <Image
-                      src="/assets/meta-center-icon3.png"
-                      alt="Icon 3"
-                      className="w-12 h-12 object-contain cursor-pointer loader"
-                      width={52}
-                      height={52}
-                    />
-                  </div>
+                    <div className="feature_icons absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 flex gap-4 z-10 opacity-0">
+                      <Image
+                        src="/assets/feature-center-icon1.png"
+                        alt="Icon 1"
+                        className="w-12 h-12 object-contain cursor-pointer"
+                        width={52}
+                        height={52}
+                      />
+                      <Image
+                        src="/assets/feature-center-icon2.png"
+                        alt="Icon 2"
+                        className="w-12 h-12 object-contain cursor-pointer"
+                        width={52}
+                        height={52}
+                      />
+                      <Image
+                        src="/assets/feature-center-icon3.png"
+                        alt="Icon 3"
+                        className="w-12 h-12 object-contain cursor-pointer"
+                        width={52}
+                        height={52}
+                      />
+                    </div>
+
                 </div>
               </div>
             </div>

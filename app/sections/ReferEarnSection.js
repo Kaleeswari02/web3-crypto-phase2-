@@ -116,11 +116,7 @@ export const ReferEarnSection = () => {
         <p className="text-gray-300 font-kraeftig text-lg sm:text-xl md:text-2xl max-w-full sm:max-w-xl">
           Sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <GradientButton
-          label="Get Link"
-          onClick={() => alert('Pressed!')}
-          className="px-6 sm:px-8 py-2 sm:py-3"
-        />
+        
       </div>
 
       {/* Phone + Cards */}
@@ -145,7 +141,15 @@ export const ReferEarnSection = () => {
             alt="Phone with Hand"
             width={2472}
             height={4096}
-            className="w-full h-auto relative z-10"
+            className="w-full h-auto relative z-10 "
+          />
+           <Image
+            ref={(el) => (tokensRef.current[0] = el)}
+            src="/assets/token.png"
+            alt="Token"
+            width={197}
+            height={197}
+            className="absolute left-[-10%] top-[40%]"
           />
           <Image
             ref={(el) => (tokensRef.current[0] = el)}

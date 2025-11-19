@@ -255,7 +255,7 @@ body {
 }
 
 .stockCoinShape {
-  width: 490px;
+  width: 350px;
   padding: 15px;
 }
 .rotatingCoin {
@@ -320,7 +320,7 @@ body {
   z-index: 10; /* ensure it floats above background but below coins if needed */
 }
 .stockDes {
-  text-align: center;
+  text-align: left;
   font-family: 'Kraeftig';
   color: #fff;
   font-size: 22px;
@@ -466,7 +466,6 @@ body {
 
 .center-coin {
   z-index: 2; /* Higher z-index so it stays in front */
-  animation: move-left-right 6s ease-in-out infinite; /* Slow left-right movement with ease */
 }
 
 .spinner-layer {

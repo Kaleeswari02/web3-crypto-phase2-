@@ -103,8 +103,8 @@ export default function Fitness() {
             ref={headingRef}
             className="text-[13px] sm:text-base md:text-xl lg:text-2xl xl:text-3xl font-semibold leading-tight text-left w-full"
           >
-            Designed For Fitness Enthusiasts Who Want To Get More Out Of Their
-            Workouts, Our App Rewards You With Crypto Every Time You Move.
+            Designed For Fitness Enthusiasts <br/> Who Want To Get More Out Of Their
+            Workouts, Our App Rewards You With <br/> Crypto Every Time You Move.
           </h1>
 
           {/* Mobile Buttons - Horizontal Layout */}
@@ -182,7 +182,7 @@ export default function Fitness() {
           >
             <div className="relative w-full max-w-[320px] bg-gradient-to-br from-blue-400 to-blue-600 rounded-3xl p-1">
               {/* Main Image Container */}
-              <div className="relative bg-lightdark rounded-3xl overflow-hidden">
+              <div className="relative bg-black rounded-3xl overflow-hidden">
                 <img
                   src={mobileImages[currentImageIndex]}
                   alt={`Slide ${currentImageIndex + 1}`}

@@ -52,7 +52,7 @@ export default function Connected() {
     <section className="w-full h-screen bg-black flex flex-col justify-center items-center relative">
       {/* Centered "Coming Soon" Image */}
       <img
-        src="/assets/Component 5 comming soon.png"
+        src="/assets/coming-soon.png"
         className="absolute top-1/2 transform -translate-y-1/2"
         alt="Coming Soon"
       />
@@ -62,34 +62,34 @@ export default function Connected() {
         {/* Icon 1 */}
         <img
           ref={icon1Ref}
-          src="/assets/CsVector1.png"
+          src="/assets/comingsoon-icon1.png"
           className="absolute w-14 h-14"
-          style={{ top: "130px", left: "319px" }}
+          style={{ top: "137px", left: "319px" }}
           alt="Icon 1"
         />
  
         {/* Icon 2 */}
         <img
           ref={icon2Ref}
-          src="/assets/CsVector2.png"
+          src="/assets/comingsoon-icon2.png"
           className="absolute w-12 h-12"
-          style={{ top: "130px", left: "609px" }}
+          style={{ top: "140px", left: "609px" }}
           alt="Icon 2"
         />
  
         {/* Icon 3 */}
         <img
           ref={icon3Ref}
-          src="/assets/CsVector3.png"
+          src="/assets/comingsoon-icon3.png"
           className="absolute w-14 h-14"
-          style={{ top: "267px", left: "388px" }}
+          style={{ top: "275px", left: "388px" }}
           alt="Icon 3"
         />
       </div>
  
       {/* Button */}
       <div>
-        <button className="bg-[#14F195] rounded-full text-black p-1 font-dreiviertelfett w-48">
+        <button className="bg-[#14F195] rounded-full text-black p-1 font-dreiviertelfett w-48 h-12">
           Back to Home
         </button>
       </div>

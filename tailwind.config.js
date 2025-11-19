@@ -13,6 +13,7 @@ module.exports = {
         purple: '#7928D2',
         darkBlue: '#300064',
         activegreen: '#14F195',
+        lightBlue:'#399FE9'
       },
       backgroundImage: {
         gradientBtn:

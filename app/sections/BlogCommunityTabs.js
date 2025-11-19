@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const BlogCommunityTabs = () => {
-  const [activeTab, setActiveTab] = useState('blog');
+  const [activeTab, setActiveTab] = useState('community');
   const containerRef = useRef(null);
   const tabsRef = useRef(null);
   const bgTextRef = useRef(null);
@@ -99,23 +99,7 @@ const BlogCommunityTabs = () => {
         ref={tabsRef}
         className="relative flex items-start w-[316px] p-[11px] mt-20 border border-black rounded-[20px] px-4 py-3 ml-[120px] z-10"
       >
-        <button
-          ref={blogButtonRef}
-          className={`px-6 py-2 rounded-full font-dreiviertelfett transition-colors ${
-            activeTab === 'blog'
-              ? 'bg-activegreen text-white'
-              : 'bg-black text-white'
-          }`}
-          onClick={() => setActiveTab('blog')}
-        >
-          Blog
-        </button>
-
-        <div className="flex items-center mx-5">
-          <div className="w-[1px] h-[41px] bg-white" />
-        </div>
-
-        <button
+         <button
           ref={communityButtonRef}
           className={`px-6 py-2 rounded-full font-dreiviertelfett transition-colors ${
             activeTab === 'community'
@@ -126,6 +110,23 @@ const BlogCommunityTabs = () => {
         >
           Community
         </button>
+       
+
+        <div className="flex items-center mx-5">
+          <div className="w-[1px] h-[41px] bg-white" />
+        </div>
+ <button
+          ref={blogButtonRef}
+          className={`px-6 py-2 rounded-full font-dreiviertelfett transition-colors ${
+            activeTab === 'blog'
+              ? 'bg-activegreen text-white'
+              : 'bg-black text-white'
+          }`}
+          onClick={() => setActiveTab('blog')}
+        >
+          Blog
+        </button>
+       
       </div>
 
       {/* Content */}

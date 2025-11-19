@@ -52,7 +52,7 @@ export default function FooterLogoSection() {
           WebkitTextStroke: '1px #a2a2a2',
           fontWeight: 300,
           letterSpacing: '0.02em'
-        }}>CRYPT</span>
+        }}>NE</span>
 
         <LetterWithImage letter="O" src="/assets/footer-icon3.png" size={79} stroke={0.8} fontWeight={300} />
       </div>

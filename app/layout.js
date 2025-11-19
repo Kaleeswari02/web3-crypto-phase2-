@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="de">
       <head>
         {/* <link rel="icon" href="/favicon.ico" /> */}
         {/* <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /> */}
