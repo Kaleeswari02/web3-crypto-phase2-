@@ -202,7 +202,7 @@ body {
   margin-top: 5%;
 }
 .crypto-txt {
-  font-size: 55px !important;
+  font-size: 32px ;
   font-family: 'Dreiviertelfett';
   line-height: 1.4;
   letter-spacing: 1px;
@@ -215,7 +215,8 @@ body {
   width: 50%;
 }
 .download-btn-phase2 {
-  color: #ffffff;
+  color: #0F0F0F;
+  margin-top: 5%;
 }
 .adjust-part-2 {
   transform: translate(-50%, -55%); /* slightly shift upwards */
@@ -672,7 +673,7 @@ body {
   transform-origin: center center;
 }
 .web3works{
-  padding-top: 7%;
+  padding-top: 5%;
   background-color: #0f0f0f;
 }
         @keyframes bounceIn {
@@ -688,15 +689,15 @@ body {
             transform: translateY(10px);
           }
           100% {
-            transform: translateY(0);
+            transform: translateY(0px);
             opacity: 1;
           }
         }
 
         .web3howitsworks {
           position: relative;
-          min-height: 100vh;
           background-image: url('/assets/howitworksbg.png');
+           min-height: 100vh;
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
@@ -724,10 +725,339 @@ body {
           display: block;
         }
 
-        @media (max-width: 768px) {
+        /* @media (max-width: 768px) {
           .web3howitsworks {
             background-size: cover;
             background-position: top;
             }
         }
- 
+  */
+
+/* Responsive work */
+@media only screen and (max-width: 580px){
+   .desktop-view{
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 580px){
+   .mobile-view{
+      display: none !important;
+  }
+}
+
+@media only screen and (min-width: 999px){
+  .web3howitsworks {
+          min-height: 100vh;
+        }
+        .mobileappsection{
+          padding: 0% 5%;
+        }
+        .web3videosec{
+           /* padding: 7%; */
+           object-fit: cover;
+        }
+        .RightSideContent{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+}
+@media only screen and (max-width: 999px){
+          .mobileappsection{
+          padding: 0% 7%;
+        }
+}
+
+@media only screen and (min-width: 1310px) and (max-width: 1550px){
+  .mobile-container img{
+    max-width: 400px;
+  }
+  .crypto-txt {
+    font-size: 27px;
+
+  }
+  .crypto-des{
+      width: 67%;
+    }
+  .appdownloadimg{
+    width: 100%;
+  }
+  .RightSideContent{
+    padding-left: 10%;
+  }
+  .desktop-view ,
+  .appdownlaod,
+  .download-btn-phase2 {
+      margin-left: 1%;
+  }
+}
+@media only screen and (min-width: 1185px) and (max-width: 1300px){
+   .mobile-container img{
+      max-width: 400px;
+    }
+    .crypto-des{
+      width: 77%;
+    }
+
+}
+/* desktop view */
+@media only screen and (min-width: 1000px) and (max-width: 1185px){
+     .mobile-container img{
+        max-width: 350px;
+      }
+       .web3hworks{
+        padding: 0% 5%;
+        background-color: #0F0F0F;
+      }
+      .web3howitsworks{
+        background-size: cover;
+      }
+      .web3howitsworks{
+        min-height: 80vh;
+      }
+      .crypto-txt {
+         font-size: 22px;
+      }
+      .crypto-des {
+        font-size: 13px;
+      }
+        .appdownloadimg{
+           width: 100%;
+        }
+        .RightSideContent{
+          padding-left: 5%;
+        }
+        .Leftsidesection{
+          width: 50%;
+        }
+        .RightSideContent{
+          width: 50%;
+        }
+        .RightSideContent{
+          display: unset !important;
+        }
+}
+
+/* tablet view */
+@media only screen and (min-width: 775px) and (max-width: 999px){
+     .mobile-container img{
+        max-width: 400px;
+      }
+       .web3hworks{
+        padding: 0% 5%;
+        background-color: #0F0F0F;
+      }
+      .web3howitsworks{
+        background-size: cover;
+      }
+      .web3howitsworks{
+         min-height: 70vh;
+      }
+      .mobileappsection{
+          padding: 0% 3%;
+        }
+        .crypto-txt{
+          font-size: 20px;
+        }
+        .crypto-des {
+          font-size: 12px;
+          width: 100%;
+        }
+}
+/* landscape view */
+@media only screen and (min-width: 600px) and (max-width: 774px){
+     .mobile-container img{
+        max-width: 450px;
+      }
+       .web3hworks{
+        padding: 0% 5%;
+        background-color: #0F0F0F;
+      }
+      .web3howitsworks{
+        background-size: cover;
+      }
+      .web3howitsworks{
+        min-height: 90vh !important;
+      }
+      .crypto-txt{
+        font-size: 17px;
+      }
+      .crypto-des{
+        font-size: 11px;
+        width: 100%;
+      }
+      .appdownloadimg{
+        width: 80%;
+      }
+        .RightSideContent{
+           padding-left: 10%;
+        }
+        .download-btn-phase2{
+          width: 60%;
+          font-size: 11px;
+          margin-top: 10%;
+        }
+        .web3videosec{
+          /* padding: 5%; */
+           object-fit: cover;
+        }
+}
+/* mobile view */
+@media only screen and (min-width: 420px) and (max-width: 600px){
+      .mobile-container img{
+        max-width: 350px;
+      }
+      .mobile-container{
+        padding:0% 7% 0% 10% ;
+       
+      }
+       .web3howitsworks {
+            background-size: contain;
+              background-position: top;
+       }
+       .web3works {
+        padding-top: 15%;
+       }
+      .web3howitsworks{
+        min-height: 80vh !important;
+       }
+       .mobile-container{
+        position: relative;
+        bottom: 4%;
+       }
+       .mobileappsection{
+        display: flex;
+        flex-direction: column-reverse;
+       }
+       .crypto-des{
+        width: 100%;
+        text-align: left !important;
+        font-size: 14px;
+       }
+       .crypto-txt{
+        font-size: 26px;
+        text-align: left !important;
+       }
+       /* .Leftsidesection{
+        height: 450px;
+       } */
+      .socialanddownload{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 3%;
+        }
+      .appdownloadimg{
+        width: 80%;
+      }
+      .download-btn-phase2{
+        margin-bottom: 5%;
+      }
+}
+@media only screen and (min-width: 350px) and (max-width: 420px){
+      .mobile-container img{
+        max-width: 330px;
+        padding: 0% 5%;
+      }
+      .mobile-container{
+        padding:2% 5% 0% 5% ;
+       
+      }
+       .web3howitsworks {
+            background-size: contain;
+              background-position: top;
+       }
+       .web3works {
+        padding-top: 15%;
+       }
+         .mobile-container{
+        position: relative;
+        bottom: 0%;
+       }
+        .mobileappsection{
+        display: flex;
+        flex-direction: column-reverse;
+       }
+       .crypto-des{
+        width: 100%;
+        text-align: left !important;
+        font-size: 14px;
+       }
+       .crypto-txt{
+        font-size: 20px;
+        text-align: left !important;
+       }
+       /* .Leftsidesection{
+        height: 400px;
+       } */
+      .socialanddownload{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 3%;
+        }
+      .appdownloadimg{
+        width: 80%;
+      }
+      .download-btn-phase2{
+        margin-bottom: 5%;
+        font-size: 12px;
+      }
+}
+/* small-mob-view */
+@media only screen and (min-width: 300px) and (max-width: 350px){
+      .web3works {
+        padding-top: 15%;
+       }
+    .mobile-container img{
+        max-width: 200px;
+          padding: 0% 5%;
+      }
+      .mobile-container{
+        padding:8% 7% 0% 13% ;
+       
+      }
+       .web3howitsworks {
+            background-size: contain;
+              background-position: top;
+       }
+       .web3howitsworks{
+        min-height: 100vh;
+       }
+         .mobileappsection{
+        display: flex;
+        flex-direction: column-reverse;
+       }
+       .crypto-des{
+        width: 100%;
+        text-align: left !important;
+        font-size: 12px;
+       }
+       .crypto-txt{
+        font-size: 18px;
+        text-align: left !important;
+       }
+       /* .Leftsidesection{
+        height: 450px;
+       } */
+      .socialanddownload{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 3%;
+        }
+      .appdownloadimg{
+        width: 80%;
+      }
+      .download-btn-phase2{
+        margin-bottom: 5%;
+        font-size: 12px;
+      }
+}
+
+
+
