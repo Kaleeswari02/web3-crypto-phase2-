@@ -31,7 +31,7 @@ export default function HowItWorksSection() {
   return (
     <>
       <section id="howItWorksSection" className='web3works'>
-        <div className="container-fluid">
+        <div className="container-fluid web3hworks">
           <div className="row">
             <div className="col-xl-12">
               <div className="web3howitsworks">

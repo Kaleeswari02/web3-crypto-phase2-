@@ -46,22 +46,22 @@ export default function Home() {
   }, []);
   return (
     <div className="min-h-screen">
-      <div className="relative min-h-screen">
+      <div className="relative min-h-screen bg-lightdark">
         <div ref={navRef} className="fixed top-0 left-0 w-full z-[9999]">
           <HeroNav />
         </div>
-        <HeroSection />
+        {/* <HeroSection /> */}
         <PreIconTransition />
         <HowItWorksSection/>
-          <Fitness/>
-         <DownloadSection />
-         <StokSpinSection />
-        <FeatureCard />
+        {/* <Fitness/> */}
+        <DownloadSection />
+        {/* <StokSpinSection /> */}
+        {/* <FeatureCard />
         <OurProductsSection />
         <ReferEarnSection />
         <BlogCommunityTabs />
-        <Footer />
-        <FixedFooter />
+        <Footer /> */}
+        {/* <FixedFooter /> */}
       </div>
     </div>
   );
